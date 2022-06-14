@@ -4,8 +4,10 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.4"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "com.android.tools.build:gradle:${Versions.GRADLE_BUILD_TOOLS}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.SAFE_ARGS_GRADLE_PLUGIN}"
     }
 }
 

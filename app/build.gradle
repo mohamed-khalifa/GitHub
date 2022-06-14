@@ -1,18 +1,21 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    compileSdk 31
+    compileSdk Versions.COMPILE_SDK_VERSION
 
     defaultConfig {
         applicationId "com.khalifa.github"
-        minSdk 23
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
-
+        minSdkVersion Versions.MIN_SDK
+        targetSdkVersion Versions.TARGET_SDK
+        versionCode Releases.VERSION_CODE
+        versionName Releases.VERSION_NAME
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -23,21 +26,38 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
 dependencies {
+    implementation Libs.KOTLIN
+    implementation Libs.COROUTINES
+    implementation Libs.HILT_ANDROID
+    kapt Libs.HILT_COMPILER
+    implementation Libs.CORE_KTX
+    implementation Libs.RETROFIT
+    implementation Libs.RETROFIT_GSON_CONVERTOR
+    implementation Libs.PAGING_COMMON_KTX
+    implementation Libs.PAGING_RUNTIME_KTX
+    implementation Libs.VIEW_MODEL
+    implementation Libs.LIFECYCLE_RUNTIME_KTX
+    implementation Libs.APPCOMPAT
+    implementation Libs.CONSTRAINT_LAYOUT
+    implementation Libs.MATERIAL
+    implementation Libs.FRAGMENT_KTX
+    implementation Libs.NAVIGATION_CORE
+    implementation Libs.NAVIGATION_KTX
+    implementation Libs.GLIDE
+    implementation Libs.GLIDE_COMPILER
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    testImplementation Libs.JUNIT
+    testImplementation Libs.MOCKK
+    testImplementation Libs.COROUTINES_TEST
+    testImplementation Libs.ARCH_CORE_TESTING
+    androidTestImplementation Libs.ANDROIDX_TEST
 }
