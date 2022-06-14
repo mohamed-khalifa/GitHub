@@ -1,4 +1,4 @@
-package com.khalifa.github.viewmodel
+package com.khalifa.github.presentation.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import kotlinx.coroutines.Dispatchers

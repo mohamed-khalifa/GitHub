@@ -1,10 +1,9 @@
-package com.khalifa.github.viewmodel
+package com.khalifa.github.presentation.viewmodel
 
 import com.khalifa.github.data.constant.NetworkConstants.SOCKET_TIME_OUT_EXCEPTION
 import com.khalifa.github.domain.entity.UserDomainEntities
 import com.khalifa.github.domain.usecase.GetUserDetailsUseCase
 import com.khalifa.github.presentation.entity.UserDetailsState
-import com.khalifa.github.presentation.viewmodel.UserDetailsViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking

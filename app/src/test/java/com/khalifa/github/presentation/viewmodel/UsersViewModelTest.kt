@@ -1,9 +1,8 @@
-package com.khalifa.github.viewmodel
+package com.khalifa.github.presentation.viewmodel
 
 import androidx.paging.PagingData
 import com.khalifa.github.domain.entity.UserDomainEntities
 import com.khalifa.github.domain.usecase.UserSearchUseCase
-import com.khalifa.github.presentation.viewmodel.UsersViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.flow.flowOf

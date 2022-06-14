@@ -1,7 +1,6 @@
-package com.khalifa.github.usecase
+package com.khalifa.github.domain.usecase
 
 import com.khalifa.github.domain.repository.UsersRepository
-import com.khalifa.github.domain.usecase.UserSearchUseCase
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
