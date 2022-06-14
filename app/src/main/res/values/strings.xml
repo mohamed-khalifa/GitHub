@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">GitHub</string>
+    <string name="app_name">GithubApp</string>
+    <string name="search_hint">username</string>
+
+    <string name="following">Following</string>
+    <string name="about">About</string>
+    <string name="about_me">No Bio Found</string>
+    <string name="followers">Followers</string>
+    <string name="repos">Repos</string>
+    <string name="an_unexpected_error_has_occurred">An unexpected error has occurred.</string>
+    <string name="user_search">Please search by a username</string>
 </resources>
