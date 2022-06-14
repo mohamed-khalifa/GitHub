@@ -13,8 +13,9 @@ object NetworkConstants {
     const val GENERAL_ERROR =
         "An unexpected error has occurred."
 
-    //Network URLs
     const val BASE_URL = "https://api.github.com/"
+    const val AUTHORIZATION = "Authorization"
+    const val TOKEN = "Token"
 
 }
 

@@ -2,6 +2,7 @@ package com.khalifa.github.data.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.khalifa.github.BuildConfig
 import com.khalifa.github.data.constant.NetworkConstants
 import com.khalifa.github.data.remote.service.ApiService
 import dagger.Module
@@ -23,6 +24,11 @@ object NetworkModule {
         return OkHttpClient.Builder()
             .addInterceptor { chain ->
                 val requestBuilder = chain.request().newBuilder()
+                // Please add your github token under system variable
+               /* requestBuilder.addHeader(
+                    NetworkConstants.AUTHORIZATION,
+                    "${NetworkConstants.TOKEN} ${BuildConfig.GITHUB_TOKEN}"
+                )*/
                 chain.proceed(requestBuilder.build())
             }.build()
     }

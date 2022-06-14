@@ -17,6 +17,10 @@ android {
         versionCode Releases.VERSION_CODE
         versionName Releases.VERSION_NAME
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //Github Environment Variable
+        def GITHUB_TOKEN = System.getenv("GITHUB_TOKEN")
+        buildConfigField 'String', 'GITHUB_TOKEN', "\"$GITHUB_TOKEN\""
     }
 
     buildTypes {
