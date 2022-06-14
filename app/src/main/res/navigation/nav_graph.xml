@@ -9,6 +9,16 @@
         android:id="@+id/usersFragment"
         android:name="com.khalifa.github.presentation.ui.UsersFragment"
         tools:layout="@layout/fragment_users">
+        <action
+            android:id="@+id/action_usersFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
     </fragment>
-
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.khalifa.github.presentation.ui.UserDetailsFragment"
+        tools:layout="@layout/fragment_user_details">
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
 </navigation>

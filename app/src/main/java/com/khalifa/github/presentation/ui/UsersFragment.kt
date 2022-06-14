@@ -9,6 +9,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import androidx.paging.LoadState
 import com.khalifa.github.R
 import com.khalifa.github.databinding.FragmentUsersBinding
@@ -97,6 +99,14 @@ class UsersFragment : Fragment() {
     }
 
     private fun navigateToUserDetails(user: UserDomainEntities.UserDomainItem) {
+        val directions =
+            UsersFragmentDirections.actionUsersFragmentToUserDetailsFragment(user.userName)
+        findNavController().navigate(directions, navOptions {
+            anim {
+                enter = android.R.animator.fade_in
+                exit = android.R.animator.fade_out
+            }
+        })
     }
 
 
